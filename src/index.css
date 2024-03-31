@@ -1,0 +1,280 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #121212;
+  color: #e1eeeb;
+  min-height: 100vh;
+}
+
+p{
+  margin: 0 !important;
+}
+
+#content {
+  max-width: 60rem;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 16px;
+  /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.8); */
+}
+
+button{
+  font-family: "Montserrat", sans-serif !important;
+}
+
+header{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem 0;
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  color: #d5d5d5;
+  text-shadow: 0 0 4px rgba(35, 34, 34, 0.4);
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+h1 em {
+  font-style: normal;
+  color: #a688fa;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin: 1rem;
+  text-align: center;
+  color: hsl(256,92%,90%);
+}
+
+#player {
+  text-align: center;
+}
+
+#player .player-name{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
+  span{
+    cursor: pointer;
+    opacity: 0.4;
+    &:hover{
+      opacity: 0.8;
+    }
+  }
+}
+
+#player h2 {
+  color: #a688fa;
+}
+
+#player p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#player input {
+  font: inherit;
+  border: 1px solid #a688fa;
+  background-color: hsla(256,92%,70%,0.3);
+  border-radius: 4px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  padding: 0.25rem;
+  color: #fff;
+  &:focus{
+    outline: none;
+    border: 1px solid hsl(256,92%,90%);
+  }
+}
+
+
+
+#player button {
+  cursor: pointer;
+  background-color: #a688fa;
+  border: 1px solid #a688fa;
+  padding: 0.35rem 1rem;
+  color: #121212;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  font-weight: 500;
+}
+
+#player button:hover {
+  background-color: hsl(256,92%,70%);
+  border-color: hsl(256,92%,70%);
+}
+
+#challenges {
+  max-width: 50rem;
+  margin: 1rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.challenge {
+  width: 22rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  margin: 2rem auto;
+  background: #282828;
+  border: 1px solid #444;
+  color: #ccc;
+  border-radius: 6px;
+  gap: 0.5rem;
+}
+
+.challenge-active{
+  border: 1px solid #a688fa;
+}
+
+.challenge button {
+  padding: 0.5rem 1rem;
+  border: 1px solid #666;
+  border-radius: 4px;
+  background-color: #444;
+  color: #f5f5f5;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 1rem 0;
+}
+
+.challenge button:hover {
+  border-color: #a688fa;
+  background-color: hsl(256,92%,70%);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.challenge h2 {
+  font-size: 2rem;
+  letter-spacing: 0.1em;
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+  color: #a688fa;
+}
+
+.challenge-time {
+  /* border: 1px solid #cccccc; */
+  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
+  display: flex;
+  align-items: center;
+  span{
+    scale: 0.75;
+  }
+}
+
+.challenge .active {
+  animation: flash 1s infinite;
+}
+
+.result-modal {
+  border: 1px solid #555;
+  border-radius: 8px;
+  padding: 2rem;
+  background-color: #282828;
+  z-index: 100;
+  color: #ccc;
+}
+
+.result-modal[open] {
+  animation: slide-in-from-top 0.35s ease-out;
+}
+
+.result-modal::backdrop {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.result-modal h2 {
+  font-family: "Montserrat", sans-serif;
+  margin: 0 0 0.5rem 0;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+
+.accuracy strong{
+  /* background-color: #121212; */
+  padding: 0 0.5rem;
+  color: #a688fa;
+}
+
+.result-modal progress {
+  width: 100%;
+  height: 1.5rem;
+  margin: 0;
+  accent-color: #46cebe;
+}
+
+.result-modal p {
+  margin: 0.5rem 0 !important;
+  font-size: 1.2rem;
+}
+
+.result-modal p strong {
+  background-color: #121212;
+  padding: 0 0.5rem;
+}
+
+.result-modal form {
+  text-align: right;
+}
+
+.result-modal button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  background: hsl(256,92%,70%);
+  color: #edfcfa;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.result-modal button:hover {
+  border-color: #a688fa;
+  background-color: hsl(256,92%,65%);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes slide-in-from-top {
+  0% {
+    transform: translateY(-15%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes flash {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
