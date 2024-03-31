@@ -30,8 +30,8 @@ Built using React with a focus on simplicity and performance.
 # Usage
 Clone the repository to your local machine.
 Navigate to the project directory.
-Install dependencies using ```sh npm install```sh.
-Start the development server with ```sh npm run dev```sh.
+Install dependencies using ```npm install```.
+Start the development server with ```npm run dev```.
 Open the app in your browser and explore the timers.
 
 # Contributions
@@ -41,5 +41,5 @@ Contributions are welcome! If you have any suggestions, feature requests, or bug
 This project is licensed under the MIT License.
 
 # Acknowledgements
-This project was inspired by the need to demonstrate the usage of ```sh useRef```sh hook in React.
+This project was inspired by the need to demonstrate the usage of ```useRef``` hook in React.
 Special thanks to the React community for their continuous support and contributions.
