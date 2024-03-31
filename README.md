@@ -9,7 +9,7 @@ This Timer Countdown App is a demonstration of using useRef hook in React to man
 
 
 # Live Preview
-You can view a live preview of the Timer Countdown App <a href="https://timercountdown-useref.netlify.app/" target="_blank">here</a>.
+You can view a live preview of the Timer Countdown App [here](https://timercountdown-useref.netlify.app/){:target="_blank"}.
 
 
 # Features
